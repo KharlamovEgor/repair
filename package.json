@@ -2,12 +2,15 @@
   "name": "repair",
   "version": "1.0.0",
   "source": "src/index.html",
+  "type": "module",
   "license": "MIT",
-  "sripts": {
-    "start": "parcel",
-    "build": "parcel build"
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "dependencies": {
-    "parcel": "^2.12.0"
+  "dependencies": {},
+  "devDependencies": {
+    "vite": "^5.4.0"
   }
 }
