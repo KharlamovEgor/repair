@@ -67,9 +67,16 @@ li{
   list-style-type: none;
 }
 /*
-  10. resets the link styles
+  10. Resets the link styles
 */
 a{
   text-decoration: none;
   color: inherit;
+}
+/*
+  11. resets the list paddings
+*/
+ul,
+ol{
+  padding: 0;
 }
