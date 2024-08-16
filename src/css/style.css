@@ -9,8 +9,19 @@
   --bg-color: #eaeaea;
 }
 
+html,
+body{
+	height: 100%;
+}
+
 body {
   font-family: 'Gilroy', sans-serif;
+  display: flex;
+	flex-direction: column;
+}
+
+main{
+	flex-grow: 1;
 }
 
 .container {
@@ -22,6 +33,11 @@ body {
 
 .container--big {
   max-width: 1440px;
+}
+
+a,
+button {
+  cursor: pointer;
 }
 
 /*BUTTON*/
