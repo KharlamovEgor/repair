@@ -7,10 +7,11 @@
   --neutral-color: #505050;
   --text-color-alt: #3c4045;
   --bg-color: #eaeaea;
-  font-size: 16px;
-
+  
   --footer-bg: #3e3e3e;
   --footer-bg-dark: #333333;
+  
+  font-size: 16px;
 }
 
 html,
