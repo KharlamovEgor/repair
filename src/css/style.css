@@ -726,6 +726,10 @@ button {
   padding: 5.3em 0 8.5em;
   margin-bottom: 4em;
   background-color: var(--bg-color);
+  position: relative;
+}
+
+.feedback__inner {
 }
 
 .feedback__subtitle {
@@ -777,6 +781,18 @@ button {
 .feedback__desc-date {
   color: var(--secondary-color);
   font-weight: 800;
+}
+
+.feedback__button {
+  font-weight: 900;
+  text-transform: uppercase;
+  position: absolute;
+  max-width: 33em;
+  margin: 0 auto;
+  top: 100%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
 }
 
 /*QUESTIONS*/
