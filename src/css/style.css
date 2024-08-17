@@ -737,6 +737,65 @@ button {
   padding-bottom: 5em;
 }
 
+/*FAQ*/
+
+.faq__title {
+  text-align: center;
+}
+
+.faq__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.75em;
+}
+
+.faq__grid-item {
+  padding-left: 3em;
+}
+
+.faq__grid-title {
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: var(--dark-color);
+  position: relative;
+
+  &::before {
+    content: url(../images/red-arrow.svg);
+    position: absolute;
+    transform: rotate(-90deg);
+    left: -3em;
+    top: 0;
+  }
+}
+
+.faq__grid-text {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease-in;
+  color: var(--text-color-alt);
+  font-size: 1rem;
+  font-weight: 500;
+
+  p {
+    padding-top: 1.25em;
+  }
+}
+
+.faq__grid-item.open .faq__grid-text {
+  max-height: 100px;
+}
+
+.faq__grid-item.open .faq__grid-title {
+  font-weight: 700;
+  &::before {
+    content: url(../images/red-arrow.svg);
+    position: absolute;
+    transform: rotate(0deg);
+    left: -3em;
+    top: 0;
+  }
+}
+
 /*FOOTER*/
 
 .footer {
