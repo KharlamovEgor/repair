@@ -431,6 +431,7 @@ button {
   text-transform: uppercase;
   color: var(--dark-color);
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -550,6 +551,7 @@ button {
   border-radius: 70px;
   @media (max-width: 45em) {
     padding-bottom: 24em;
+    overflow: hidden;
   }
   @media (max-width: 31em) {
     padding-bottom: 20em;
@@ -568,6 +570,7 @@ button {
   line-height: 1.2;
   @media (max-width: 45em) {
     text-align: center;
+    font-size: 2rem;
   }
 }
 
@@ -588,12 +591,10 @@ button {
   bottom: 0;
   right: 1.68em;
   @media (max-width: 45em) {
-    left: 0;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 0;
     margin: 0 auto;
-    border-bottom-left-radius: 70px;
-    border-bottom-right-radius: 70px;
   }
 }
 
@@ -900,13 +901,6 @@ button {
   margin-right: -10px;
 }
 
-@media (min-width: 768px) {
-  .itc-slider__item {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-}
-
 .itc-slider__inner {
   overflow: hidden;
 }
@@ -1012,38 +1006,17 @@ button {
   transform: rotate(180deg);
 }
 
-/* индикаторы */
-.itc-slider__indicators {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 15;
-  display: flex;
-  justify-content: center;
-  margin: 0 15%;
-  padding-left: 0;
-  list-style: none;
-}
-
-.itc-slider__indicator {
-  flex: 0 1 auto;
-  box-sizing: content-box;
-  width: 30px;
-  height: 5px;
-  margin-right: 3px;
-  margin-left: 3px;
-  text-indent: -999px;
-  background-color: rgb(255 255 255 / 50%);
-  background-clip: padding-box;
-  border-top: 15px solid transparent;
-  border-bottom: 15px solid transparent;
-  cursor: pointer;
-}
-
 .itc-slider__indicator_active {
   background-color: rgb(255 255 255 / 90%);
 }
+
+@media (max-width: 768px) {
+  .itc-slider__item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
 
 /*QUESTIONS*/
 
