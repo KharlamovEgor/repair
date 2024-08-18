@@ -86,6 +86,9 @@ button {
   font-size: 3.75rem;
   text-transform: uppercase;
   color: var(--dark-color);
+  @media (max-width: 45em) {
+    font-size: 2.5rem;
+  }
 }
 
 /*TEXT*/
@@ -545,6 +548,15 @@ button {
   position: relative;
   background: linear-gradient(180deg, #6cb0ff 0%, #e1f2ff 100%);
   border-radius: 70px;
+  @media (max-width: 45em) {
+    padding-bottom: 24em;
+  }
+  @media (max-width: 31em) {
+    padding-bottom: 20em;
+  }
+  @media (max-width: 25em) {
+    padding-bottom: 15em;
+  }
 }
 
 .form-section__title {
@@ -554,6 +566,9 @@ button {
   color: var(--light-color);
   max-width: 15.6em;
   line-height: 1.2;
+  @media (max-width: 45em) {
+    text-align: center;
+  }
 }
 
 .form-section__subtitle {
@@ -563,12 +578,23 @@ button {
   text-transform: uppercase;
   color: var(--light-color);
   margin-bottom: 2em;
+  @media (max-width: 45em) {
+    text-align: center;
+  }
 }
 
 .form-section__inner-img {
   position: absolute;
   bottom: 0;
   right: 1.68em;
+  @media (max-width: 45em) {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+  }
 }
 
 .form-section__title span {
@@ -579,6 +605,12 @@ button {
   display: flex;
   align-items: center;
   padding-bottom: 6em;
+  @media (max-width: 45em) {
+    flex-direction: column;
+    width: 60%;
+    gap: 1em;
+    margin: 0 auto;
+  }
 }
 
 .form-section__form-input {
@@ -588,6 +620,9 @@ button {
   padding: 0.55em 1.2em;
   margin-right: 0.5em;
   outline: var(--light-color);
+  @media (max-width: 45em) {
+    width: 100%;
+  }
 }
 
 .form-section__from-input::placeholder {
@@ -595,6 +630,12 @@ button {
   font-size: 0.75rem;
   text-transform: uppercase;
   color: var(--text-color-alt);
+}
+
+.form-section__form-button {
+  @media (max-width: 45em) {
+    width: 100%;
+  }
 }
 
 /*EXAMPLES*/
@@ -656,7 +697,7 @@ button {
 /*ABOUT*/
 
 .about {
-  margin-bottom: 4em;
+  margin-bottom: 3em;
 }
 
 .about__title {
@@ -707,8 +748,16 @@ button {
 .about__employee {
   margin-top: 5em;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   text-align: center;
+  @media (max-width: 45em) {
+    margin-top: 3em;
+  }
+}
+
+.about__employee-item {
+  margin: 0 0.6em 1em;
 }
 
 .about__emploayee-img {
@@ -758,10 +807,22 @@ button {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2.4em;
+  @media (max-width: 45em) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .feedback__content-item {
   display: flex;
+  @media (max-width: 35em) {
+    flex-direction: column-reverse;
+  }
+}
+
+.feedback__video {
+  @media (max-width: 35em) {
+    margin: 0 auto;
+  }
 }
 
 .feedback__video iframe {
@@ -774,6 +835,14 @@ button {
   margin-left: 2.43em;
   margin-top: 1.2em;
   max-width: 16.35em;
+  @media (max-width: 45em) {
+    font-size: 0.85rem;
+    max-width: 100%;
+  }
+  @media (max-width: 35em) {
+    margin-left: 0;
+    margin-bottom: 2em;
+  }
 }
 
 .feedback__desc-inner {
