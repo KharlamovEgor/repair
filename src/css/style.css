@@ -1248,6 +1248,9 @@ button {
   text-decoration: underline;
   text-underline-offset: 0.2em;
   margin-bottom: 0.58em;
+  &:hover {
+    color: #ccc;
+  }
 }
 
 .footer__bg-hack {
@@ -1278,12 +1281,7 @@ button {
     gap: 1em;
     padding: 1em 0.625em;
     flex-wrap: wrap;
-  }
-
-  & > div:nth-child(1) {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
+    justify-content: space-between;
   }
 
   & > div:nth-child(2) {
@@ -1297,17 +1295,27 @@ button {
       letter-spacing: 0.03em;
       font-weight: 300;
       white-space: nowrap;
+      @media (max-width: 45em) {
+        font-size: 1.8rem;
+      }
     }
 
     span:nth-child(2) {
       font-size: 0.625rem;
       font-weight: 700;
       color: #979797;
+      @media (max-width: 45em) {
+        font-size: 0.8rem;
+        margin: 0 0 0 auto;
+      }
     }
 
     span:nth-child(3) {
       font-size: 0.75rem;
       font-weight: 500;
+      @media (max-width: 45em) {
+        font-size: 0.865rem;
+      }
     }
   }
 
@@ -1329,5 +1337,27 @@ button {
     @media (max-width: 45em) {
       grid-template-columns: repeat(4, 1fr);
     }
+  }
+}
+
+.footer__contacts-messengers {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  @media (max-width: 45em) {
+    order: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 2;
+  }
+}
+.footer__contacts-socialnet {
+  @media (max-width: 45em) {
+    flex-grow: 6;
+  }
+}
+.footer__contacts-num {
+  @media (max-width: 45em) {
+    width: 100%;
   }
 }
