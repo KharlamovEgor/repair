@@ -773,6 +773,68 @@ button {
   }
 }
 
+/*STAGES*/
+
+.stages {
+  padding-bottom: 2em;
+  margin-bottom: 3.8em;
+  background: linear-gradient(0deg, rgba(244, 244, 244, 1) 48%, rgba(255, 255, 255, 1) 30%);
+}
+
+.stages__title {
+  text-align: center;
+  margin-bottom: 1.11em;  
+}
+
+.stages__list {
+  counter-reset: my-awesome-counter;
+  display: flex;
+  justify-content: space-between;
+}
+
+.stages__list-item {
+  display: block;
+  width: 100%;
+  counter-increment: my-awesome-counter;
+  position: relative;
+}
+
+.stages__list-item::before {
+  content: counter(my-awesome-counter);
+  color: var(--secondary-color);
+  font-weight: bold;
+  font-size: 6rem;
+  position: absolute;
+  bottom: 0;
+  line-height: 1;
+}
+
+.stages__list-item::after {
+  content: '>';
+  position: absolute;
+  right: 9px;
+  top: 15px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.stages__list-item:last-child::after {
+  display: none;
+}
+
+.stages__img {
+  margin-bottom: 2em;
+}
+
+.stages__text {
+  margin-left: 5em;
+  margin-right: 2em;
+  line-height: 1;
+  margin-bottom: 2em;
+}
+
+
 /*ABOUT*/
 
 .about {
