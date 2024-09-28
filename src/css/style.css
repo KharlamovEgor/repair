@@ -788,8 +788,16 @@ button {
 
 .stages__list {
   counter-reset: my-awesome-counter;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
   justify-content: space-between;
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .stages__list-item {
@@ -797,6 +805,10 @@ button {
   width: 100%;
   counter-increment: my-awesome-counter;
   position: relative;
+  @media (max-width: 1200px) {
+    max-width: 290px;
+    margin: 0 auto;
+  }
 }
 
 .stages__list-item::before {
