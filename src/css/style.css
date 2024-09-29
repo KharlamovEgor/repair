@@ -513,7 +513,7 @@ button {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2.1em;
-
+  margin-bottom: 6em;
   @media (max-width: 45em) {
     grid-template-columns: 1fr;
     gap: 1em;
@@ -593,6 +593,61 @@ button {
   &:hover path,
   &:hover rect {
     fill: var(--primary-hover-color);
+  }
+}
+
+/*PRICE*/
+.price {
+  margin-bottom: 6em;
+}
+.price__title {
+  margin-bottom: 0.6em;
+}
+.price__names span {
+  display: inline-block;
+  color: var(--neutral-color);
+  border-bottom: 3px solid var(--bg-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.35em 1em;
+}
+.price__names span:first-child {
+  width: 57%;
+  margin-right: 3%;
+}
+.price__names span:last-child {
+  width: 40%;
+}
+.price__item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 1.125rem;
+  color: var(--primary-color);
+  padding: 0.4em 0.8em;
+  border-radius: 15px;
+  margin: .2em 0;
+  @media (max-width: 720px) {
+    justify-content: end;
+  }
+}
+.price__item:nth-child(2n) {
+  background-color: var(--bg-color);
+}
+.price__item-name {
+  color: var(--dark-color);
+  flex-basis: 62%;
+  font-weight: 500;
+}
+.price__item-price {
+  flex-grow: 1;
+  font-weight: 600;
+}
+.price__item-button {
+  padding: 0.65em 3em;
+  @media (max-width: 720px) {
+    flex-basis: 38%;
   }
 }
 
